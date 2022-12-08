@@ -16,18 +16,8 @@
   },
   "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
+    "prettier/prettier": "error",
     "camelcase" : "off",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        "selector": "interface",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "^I[A-Z]",
-          "match": true
-        }
-      }
-    ],
     "class-methods-use-this": "off",
     "no-shadow": "off",
     "no-useless-constructor": "off",
@@ -54,7 +44,17 @@
         "devDependencies": ["**/*.spec.js"]
       }
     ],
-    "prettier/prettier": "error"
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
